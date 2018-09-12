@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weather</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="main.html"><div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div></a>
+        <div id="lunguage">
+            <form action="">
+                <select name="language" id="language">
+                    <option value="language">language</option>
+                    <option value="japanese">日本語</option>
+                    <option value="english">english</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div id="main_frame">
+        <div id="select">
+            <form method="get">
+                <select name="cityName" id="address" 　onchange="submit(this.form)">
+                    <option></option>
+                    <option value="hokkaido">北海道</option>
+                    <option value="aomori">青森</option>
+                    <option value="morioka">岩手</option>
+                    <option value="akita">秋田</option>
+                    <option value="yamagata">山形</option>
+                    <option value="miyagi">宮城</option>
+                    <option value="hukushima">福島</option>
+                    <option value="nigata">新潟</option>
+                    <option value="tochigi">栃木</option>
+                    <option value="gunma">群馬</option>
+                    <option value="ibaragi">茨城</option>
+                    <option value="saitama">埼玉</option>
+                    <option value="tokyo">東京</option>
+                    <option value="kanagawa">神奈川</option>
+                    <option value="chiba">千葉</option>
+                    <option value="yamanashi">山梨</option>
+                    <option value="nagano">長野</option>
+                    <option value="sizuoka">静岡</option>
+                    <option value="toyama">富山</option>
+                    <option value="gifu">岐阜</option>
+                    <option value="ishikawa">石川</option>
+                    <option value="aichi">愛知</option>
+                    <option value="fukui">福井</option>
+                    <option value="shiga">滋賀</option>
+                    <option value="mie">三重</option>
+                    <option value="nara">奈良</option>
+                    <option value="kyoo">京都</option>
+                    <option value="osaka">大阪</option>
+                    <option value="wakayama">和歌山</option>
+                    <option value="hyogo">兵庫</option>
+                    <option value="oakayama">岡山</option>
+                    <option value="tottori">鳥取</option>
+                    <option value="hiroshima">広島</option>
+                    <option value="shimane">島根</option>
+                    <option value="yamaguchi">山口</option>
+                    <option value="kagawa">香川</option>
+                    <option value="tokushima">徳島</option>
+                    <option value="ehime">愛媛</option>
+                    <option value="kochi">高知</option>
+                    <option value="fukuoka">福岡</option>
+                    <option value="oita">大分</option>
+                    <option value="miyazaki">宮崎</option>
+                    <option value="saga">佐賀</option>
+                    <option value="nagasaki">長崎</option>
+                    <option value="kumamoto">熊本</option>
+                    <option value="kagoshima">鹿児島</option>
+                    <option value="okinawa">沖縄</option>
+                    <input type="submit" value="ここをキャンプ地とする">
+                </select>
+            </form>
+        </div>
+        <div id="weather">
+
+            <div class="tabs">
+                <input id="tab-1" type="radio" name="tab-radio" checked>
+                <label class="tab-label" for="tab-1">今日</label>
+
+                <input id="tab-2" type="radio" name="tab-radio">
+                <label class="tab-label" for="tab-2">明日</label>
+
+                <input id="tab-3" type="radio" name="tab-radio">
+                <label class="tab-label" for="tab-3">明後日</label>
+
+                <div class="tab-content tab-1-content">
+                    <img src="img/weather/sun.png" alt="today">
+                </div>
+                <div class="tab-content tab-2-content">
+                    <img src="img/weather/rain.png" alt="tomorrow">
+                </div>
+                <div class="tab-content tab-3-content">
+                    <img src="img/weather/cloud.png" alt="dayaftertomorrow">
+                </div>
+
+                <div class="tab-content tab-1-content">
+                    <div class="humidity">
+                        乾燥時間８時間
+                    </div>
+                    <div class="dry_time">
+                        湿度２０％
+                    </div>
+                    <div class="max">
+                        最高<br/>
+                        ３１°
+                    </div>
+                    <div class="now">
+                        現在<br/>
+                        ２６°
+                    </div>
+                    <div class="min">
+                        最低<br/>
+                        ２２°
+                    </div>
+                    <div class="now_address"></div>
+                </div>
+                <div class="tab-content tab-2-content">
+                    <div class="humidity"></div>
+                    <div class="dry_time"></div>
+                    <div class="max"></div>
+                    <div class="now"></div>
+                    <div class="min"></div>
+                    <div class="now_address"></div>
+                </div>
+                <div class="tab-content tab-3-content">
+                    <div class="humidity"></div>
+                    <div class="dry_time"></div>
+                    <div class="max"></div>
+                    <div class="now"></div>
+                    <div class="min"></div>
+                    <div class="now_address"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

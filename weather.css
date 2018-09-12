@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+}
+
+#main_frame {
+    height: 90vh;
+    background-image: url("img/blue_sky.jpg")
+}
+
+/************************************
+** CSSでタブ表示
+************************************/
+/* タブの外枠 */
+.tabs {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* タブのスタイル */
+.tabs .tab-label {
+    display: inline-block;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid #999;
+    /* background-color: #f3f3f3; */
+    background-color: transparent;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 3px 6px;
+    border-bottom: none;
+    font-size: 0.9em;
+    width: 14vh;
+}
+
+/* タブにマウスカーソルがのったときフッター */
+.tabs .tab-label:hover {
+    opacity: 0.7;
+}
+
+/* ラジオボタンと内容を非表示 */
+.tabs input[name="tab-radio"],
+.tabs .tab-content {
+    display: none;
+}
+
+/* タブ内容のスタイル */
+.tabs .tab-content {
+    /* border: 1px solid #999; */
+    padding: 10px;
+    /* min-height: 200px; */
+    height: 35vh;
+}
+
+/* 選択されているタブのコンテンツのみを表示 */
+.tabs #tab-1:checked~.tab-1-content,
+.tabs #tab-2:checked~.tab-2-content,
+.tabs #tab-3:checked~.tab-3-content,
+.tabs #tab-4:checked~.tab-4-content,
+.tabs #tab-5:checked~.tab-5-content {
+    display: block;
+}
+
+/* 選択されているタブのスタイルを変える */
+.tabs input[name="tab-radio"]:checked+.tab-label {
+    background-color: #fff;
+}
+
+/* タブ内の画像 */
+.tabs img {
+    width: 35vh;
+}
+
+/* メインフレーム下部分 */
+.humidity {
+    width: 100%;
+    height: 25%;
+    /* border: 0.5px solid black; */
+    font-size: 2em;
+}
+
+.dry_time {
+    width: 100%;
+    height: 25%;
+    /* border: 0.5px solid black; */
+    font-size: 2em;
+}
+
+.max {
+    width: 33%;
+    height: 50%;
+    /* border: 0.5px solid black; */
+    float: left;
+    font-size: 2em;
+    color: red;
+}
+
+.now {
+    width: 33%;
+    height: 50%;
+    /* border: 0.5px solid black; */
+    float: left;
+    font-size: 2em;
+    color: black;
+}
+
+.min {
+    width: 33%;
+    height: 50%;
+    /* border: 0.5px solid black; */
+    float: left;
+    font-size: 2em;
+    color: blue;
+}
