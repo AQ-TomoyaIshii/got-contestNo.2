@@ -1,0 +1,21 @@
+*{
+    margin : 0;
+}
+#result{
+    background-color: pink;
+    top : 40px;
+    height : 190px;;
+    width : 100%;
+}
+#result p{
+    text-align: center;
+    font-size: 30px;
+}
+
+.result_box{
+    margin : 10px;
+    height: 48px;
+    width : 48px;
+    background-color: aqua;
+    float: left;
+}
