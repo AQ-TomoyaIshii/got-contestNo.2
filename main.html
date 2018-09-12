@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="main.html">
+            <div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div>
+        </a>
+        <div id="lunguage">
+            <form action="">
+                <select name="language" id="language">
+                    <option value="language">language</option>
+                    <option value="japanese">日本語</option>
+                    <option value="english">english</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <img src="img/top_img1.jpg" alt="">
+
+        <div id="tophoto" class="menu">
+            <img src="img/icon/camera_icon.png" alt="camera_icon">
+            <p>写真を撮る</p>
+            <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
+            <script>
+                document.querySelector("#tophoto").onclick = function (e) {
+                    document.querySelector("#upfile").click();
+                }
+                document.querySelector("#upfile").onchange = function (e) {
+                    console.log(e);
+                }
+            </script>
+        </div>
+        <a href="library.html">
+            <div id="library" class="menu">
+                <img src="img/icon/book_icon.png" alt="book_icon">
+                <p>一覧を見る</p>
+            </div>
+        </a>
+        <a href="weather.html">
+            <div id="weather" class="menu">
+                <img src="img/icon/weather_icon.png" alt="weather_icon">
+                <p>天気を調べる</p>
+            </div>
+        </a>
+        <a href="how_to.html">
+            <div id="howtouse" class="menu">
+                <img src="img/icon/question_icon.png" alt="question_icon">
+                <p>使い方</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>
