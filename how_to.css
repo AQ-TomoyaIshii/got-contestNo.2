@@ -1,0 +1,28 @@
+*{
+    margin : 0;
+}
+#photo{
+    height : 31vh;
+}
+#phone{
+    height : 31vh;
+}
+#weather{
+    height : 31vh;
+}
+.image{
+    float: left;
+    width : 40%;
+    height : 60%;
+    padding : 6vh 0;
+}
+.image img{
+    width : 100%;
+}
+.text{
+    float: left;
+    width : 60%;
+    height : 60%;
+    padding : 6vh 0;
+    font-size: 3vh;
+}
