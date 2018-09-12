@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+#header {
+    /* position: fixed; */
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: navy;
+    color: white;
+    font-size: 150%;
+}
+
+#top_title {
+    float: left;
+    height: 6vh;
+    margin: 0;
+    width: auto;
+    background-image: url("img/top_title.jpg");
+}
+
+#top_title img {
+    height: 10vh;
+    width: auto;
+}
+
+#language {
+    float: right;
+    margin: 10px 10px 0px 5px;
+    width: 22%;
+}
