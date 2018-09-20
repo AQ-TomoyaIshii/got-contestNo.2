@@ -28,8 +28,8 @@
     margin-right: 1px;
     padding: 3px 6px;
     border-bottom: none;
-    font-size: 0.9em;
-    width: 14vh;
+    font-size: 22px;
+    width: 12vh;
 }
 
 /* タブにマウスカーソルがのったときフッター */
@@ -67,18 +67,18 @@
 
 /* タブ内の画像 */
 .tabs img {
-    width: 35vh;
+    width: 32vh;
 }
 
 /* メインフレーム下部分 */
-.humidity {
+.dry_time {
     width: 100%;
     height: 25%;
     /* border: 0.5px solid black; */
     font-size: 2em;
 }
 
-.dry_time {
+.humidity{
     width: 100%;
     height: 25%;
     /* border: 0.5px solid black; */
@@ -110,4 +110,10 @@
     float: left;
     font-size: 2em;
     color: blue;
+}
+#address{
+    font-size: 20px;
+}
+.nowaddress{
+    font-size: 24px;
 }

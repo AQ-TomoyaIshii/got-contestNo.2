@@ -2,13 +2,13 @@
     margin : 0;
 }
 #photo{
-    height : 31vh;
+    height : 30vh;
 }
 #phone{
-    height : 31vh;
+    height : 30vh;
 }
 #weather{
-    height : 31vh;
+    height : 30vh;
 }
 .image{
     float: left;

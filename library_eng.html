@@ -12,25 +12,23 @@
 
 <body>
     <div id="header">
-        <a href="./main.html">
-            <div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div>
-        </a>
+        <a href="./main_eng.html"><div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div></a>
         <div id="lunguage">
-            <form action="">
-                <select name="language" id="language" onChange="location.href=value;">
-                    <option value="libraly.html">日本語</option>
-                    <option value="library_eng.html">english</option>
-                </select>
-            </form>
-        </div>
+                <form action="">
+                    <select name="language" id="language" onChange="location.href=value;">                    
+                        <option value="library_eng.html">english</option>
+                        <option value="library.html">日本語</option>                    
+                    </select>
+                </form>
+            </div>
     </div>
     <div id="main_body">
         <p id="tabcontrol">
-            <a href="#how_to_wash">洗い方</a>
-            <a href="#bleaching">漂白</a>
-            <a href="#drying">乾燥</a>
-            <a href="#iron">アイロン</a>
-            <a href="#cleaning">クリーニング</a>
+            <a href="#how_to_wash">WASH</a>
+            <a href="#bleaching">BLEACH</a>
+            <a href="#drying">DRY</a>
+            <a href="#iron">IRON</a>
+            <a href="#cleaning">CLEANING</a>
         </p>
         <div id="tabbody">
             <div id="how_to_wash">
@@ -217,7 +215,7 @@
                 </span>
                 <span class="description" id="img61">
                     <span class="icon_box"><img src="img/tag/cleaning/img61.gif" alt="img61"></span>
-                    <p> 石油系溶剤による弱いドライクリーニングができる</p>
+                    <p>	石油系溶剤による弱いドライクリーニングができる</p>
                 </span>
                 <span class="description" id="img63">
                     <span class="icon_box"><img src="img/tag/cleaning/img63.gif" alt="img63"></span>
@@ -229,7 +227,7 @@
                 </span>
                 <span class="description" id="img65">
                     <span class="icon_box"><img src="img/tag/cleaning/img65.gif" alt="img65"></span>
-                    <p> 弱い操作のウエットクリーニングができる</p>
+                    <p>	弱い操作のウエットクリーニングができる</p>
                 </span>
                 <span class="description" id="img66">
                     <span class="icon_box"><img src="img/tag/cleaning/img66.gif" alt="img66"></span>
@@ -283,24 +281,23 @@
         tabs[0].onclick();
 
         // クリックスクロール
-        $(function () {
-            // #で始まるアンカーをクリックした場合に処理
-            $('a[href^="#"]').click(function () {
-                // スクロールの速度
-                var speed = 400; // ミリ秒
-                // アンカーの値取得
-                var href = $(this).attr("href");
-                // 移動先を取得
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                // 移動先を数値で取得
-                var position = target.offset().top;
-                // スムーススクロール
-                $('body,html').animate({
-                    scrollTop: position
-                }, speed, 'swing');
-                return false;
-            });
-        });
+        $(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^="#"]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+
     </script>
 </body>
 

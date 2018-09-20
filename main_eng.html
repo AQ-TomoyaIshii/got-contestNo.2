@@ -12,14 +12,14 @@
 
 <body>
     <div id="header">
-        <a href="main.html">
+        <a href="main_eng.html">
             <div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div>
         </a>
         <div id="lunguage">
             <form action="">
-                <select name="language" id="language" onChange="location.href=value;">                    
-                    <option value="main.html">日本語</option>
+                <select name="language" id="language" onChange="location.href=value;">
                     <option value="main_eng.html">english</option>
+                    <option value="main.html">日本語</option>                    
                 </select>
             </form>
         </div>
@@ -29,7 +29,7 @@
 
         <div id="tophoto" class="menu">
             <img src="img/icon/camera_icon.png" alt="camera_icon">
-            <p>写真を撮る</p>
+            <p>take a photo</p>
             <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
             <script>
                 document.querySelector("#tophoto").onclick = function (e) {
@@ -40,31 +40,26 @@
                 }
             </script>
         </div>
-        <a href="library.html">
+        <a href="library_eng.html">
             <div id="library" class="menu">
                 <img src="img/icon/book_icon.png" alt="book_icon">
-                <p>一覧を見る</p>
+                <p>libraly</p>
             </div>
         </a>
-        <a href="weather.html">
+        <a href="weather_eng.html">
             <div id="weather" class="menu">
                 <img src="img/icon/weather_icon.png" alt="weather_icon">
-                <p>天気を調べる</p>
+                <p>weather</p>
             </div>
         </a>
-        <a href="how_to.html">
+        <a href="how_to_eng.html">
             <div id="howtouse" class="menu">
                 <img src="img/icon/question_icon.png" alt="question_icon">
-                <p>使い方</p>
+                <p>how to use</p>
             </div>
         </a>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $('[language]').change(function () {
-            window.location.href = '/main_eng.html';
-        });
-    </script> -->
+
 </body>
 
 </html>
