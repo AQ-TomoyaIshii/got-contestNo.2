@@ -16,7 +16,7 @@ p{
 
 #tophoto {
     float: left;
-    margin: 8% 5%;
+    margin: 6% 5%;
     height: 18vh;
     width : 40%;
     background-color:deepskyblue;
@@ -30,7 +30,7 @@ p{
 
 #library {
     float: left;
-    margin: 8% 5%;
+    margin: 6% 5%;
     height: 18vh;
     width : 40%;
     background-color:deepskyblue;
@@ -44,7 +44,7 @@ p{
 #weather {
     clear: both;
     float: left;
-    margin: 8% 5%;
+    margin: 6% 5%;
     height: 18vh;
     width : 40%;
     background-color:deepskyblue;
@@ -58,7 +58,7 @@ p{
 
 #howtouse {
     float: left;
-    margin: 8% 5%;
+    margin: 6% 5%;
     height: 18vh;
     width : 40%;
     background-color:deepskyblue;

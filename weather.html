@@ -28,7 +28,7 @@
         <div id="select">
             <form method="get">
                 <select name="cityName" id="address">
-                    <option value="kanagawa">神奈川</option>
+                    <option value="">県選択</option>
                     <option value="sapporo">北海道</option>
                     <option value="aomori">青森</option>
                     <option value="morioka">岩手</option>
@@ -36,17 +36,17 @@
                     <option value="yamagata">山形</option>
                     <option value="sendai">宮城</option>
                     <option value="koriyama">福島</option>
-                    <option value="nigata">新潟</option>
+                    <option value="niigata">新潟</option>
                     <option value="tochigi">栃木</option>
                     <option value="maebashi">群馬</option>
-                    <option value="ibaragi">茨城</option>
+                    <option value="ibaraki">茨城</option>
                     <option value="saitama">埼玉</option>
-                    <option value="tokyo">東京</option>
+                    <option value="tokyo" style="background-color:transparent">東京</option>
                     <option value="kanagawa">神奈川</option>
                     <option value="chiba">千葉</option>
                     <option value="yamanashi">山梨</option>
                     <option value="nagano">長野</option>
-                    <option value="sizuoka">静岡</option>
+                    <option value="shizuoka">静岡</option>
                     <option value="toyama">富山</option>
                     <option value="ogaki">岐阜</option>
                     <option value="ishikawa">石川</option>
@@ -55,11 +55,11 @@
                     <option value="kusatsu">滋賀</option>
                     <option value="tsu">三重</option>
                     <option value="nara">奈良</option>
-                    <option value="kyoo">京都</option>
+                    <option value="kyoto">京都</option>
                     <option value="osaka">大阪</option>
                     <option value="wakayama">和歌山</option>
                     <option value="kobe">兵庫</option>
-                    <option value="oakayama">岡山</option>
+                    <option value="okayama">岡山</option>
                     <option value="tottori">鳥取</option>
                     <option value="hiroshima">広島</option>
                     <option value="matsue">島根</option>
@@ -93,76 +93,79 @@
                 <label class="tab-label" for="tab-3">明後日</label>
 
                 <div class="tab-content tab-1-content">
-                    <img src="img/weather/sun.png" alt="today">
+                    <img src="img/weather/shower_rain.png" alt="today">
                 </div>
                 <div class="tab-content tab-2-content">
-                    <img src="img/weather/rain.png" alt="tomorrow">
+                    <img src="img/weather/thunderstorm.png" alt="tomorrow">
                 </div>
                 <div class="tab-content tab-3-content">
                     <img src="img/weather/cloud.png" alt="dayaftertomorrow">
                 </div>
-                <p class="nowaddress"></p>
+                <div id="nowaddress">
+                    <p>現在地</p>
+                </div>
 
 
                 <div class="tab-content tab-1-content">
                     <div class="dry_time">
-                        乾燥時間８時間
+                        乾燥時間目安
                     </div>
                     <div class="humidity">
-
+                        湿度
                     </div>
                     <div class="max">
-
+                        最高<br />
+                        気温
                     </div>
                     <div class="now">
                         現在<br />
-                        ２６°
+                        気温
                     </div>
                     <div class="min">
                         最低<br />
-                        ２２°
+                        気温
                     </div>
                     <div class="now_address"></div>
                 </div>
                 <div class="tab-content tab-2-content">
                     <div class="dry_time">
-                        乾燥時間時間
+                        乾燥時間目安
                     </div>
                     <div class="humidity">
-                        湿度％
+                        湿度
                     </div>
                     <div class="max">
                         最高<br />
-                        °
+                        気温
                     </div>
                     <div class="now">
                         現在<br />
-                        °
+                        気温
                     </div>
                     <div class="min">
                         最低<br />
-                        °
+                        気温
                     </div>
                     <div class="now_address"></div>
                 </div>
                 <div class="tab-content tab-3-content">
                     <div class="dry_time">
-                        乾燥時間時間
+                        乾燥時間目安
                     </div>
                     <div class="humidity">
-                        湿度％
+                        湿度
                     </div>
                     <div class="max">
                         最高<br />
-                        °
+                        気温
                     </div>
                     <div class="now">
                         現在<br />
-                        °
+                        気温
                     </div>
                     <div class="min">
                         最低<br />
-                        °
+                        気温
                     </div>
                     <div class="now_address"></div>
                 </div>
@@ -174,40 +177,103 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script>
-        $.ajax({
-            url: "http://10.17.3.228:3001/yokohama",
-            // url:"http://192.168.0.5:3001/yokohama",
-            type: "get",
-            success: function (data) {
-                console.log(`data:${data}`);
-                console.log(data);
-
-                var humi = data.humidity;
-                var max2 = data.temp_max;
-                var main = Math.floor(data.main);
-                var min2 = data.temp_min;
-                var drytime = Math.floor(humi / main * 2);
-                $(document).ready(function () {
-                    $(".humidity").html("湿度" + humi + "%");
-                    $(".max").html("最高" + max2 + "°");
-                    $(".now").html("現在" + main + "°");
-                    $(".min").html("最低" + min2 + "°");
-                    $(".dry_time").html("乾燥時間" + drytime + "時間");
-                });
-
-            },
-            error: function (err) {
-                console.error(err);
-            }
-        });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+        var ken = '';
         $('[name=cityName]').change(function () {
+            ken = $('[name=cityName] option:selected').val();
+            console.log(`ken: ${ken}`);
             var txt = $('[name=cityName] option:selected').text();
             $('p').text(txt);
+
+            $.ajax({
+                // url: `http://10.17.3.228:3001/${ken}`,
+                url: `http://10.17.4.86:3001/${ken}`,
+                // url:"http://192.168.0.5:3001/yokohama",
+                type: "get",
+                success: function (data) {
+                    console.log(`data:${data}`);
+                    console.log(data);
+
+                    var humi = data.humidity;
+                    var max2 = Math.floor(data.temp_max);
+                    var main = Math.floor(data.main);
+                    var min2 = Math.floor(data.temp_min);
+                    var drytime = Math.floor(humi / main * 2);
+                    $(document).ready(function () {
+                        $(".humidity").html("湿度" + humi + "%");
+                        $(".max").html("最高" + "<br/>" + max2 + "°");
+                        $(".now").html("現在" + "<br/>" + main + "°");
+                        $(".min").html("最低" + "<br/>" + min2 + "°");
+                        $(".dry_time").html("乾燥時間" + drytime + "時間");
+                    });
+                    // データ受け取り
+
+                    var weather_judge = data.weather;
+
+                    // 受け取れたか確認↓ 「確認後削除」
+                    console.log(weather_judge);
+
+                    // 動作確認↓ 「確認後削除」
+                    // weather_judge = "clear sky";
+                    // weather_judge ="few clouds";
+                    // weather_judge ="scattered clouds";
+                    // weather_judge = "broken clouds";
+                    // weather_judge = "shower rain";
+                    // weather_judge = "mist";
+                    // weather_judge = "rain";
+                    // weather_judge = "thunderstorm";
+                    // weather_judge = "snow";
+
+                    switch (weather_judge) {
+                        // 晴れ処理
+                        case("Clear"):
+                        case ("Clear sky"):
+                        case ("Few clouds"):
+                            weather_judge = "img/weather/sun.png";
+                            break;
+
+                            // 曇り処理
+                        case ("Scattered clouds"):
+                        case ("Broken clouds"):
+                        case ("Clouds"):
+                            weather_judge = "img/weather/cloud.png";
+                            break;
+
+                            // 小雨処理
+                        case ("Shower rain"):
+                        case ("Mist"):
+                        case("Drizzle"):
+                            weather_judge = "img/weather/shower_rain.png";
+                            break;
+
+                            // 雨処理
+                        case ("Rain"):
+                            weather_judge = "img/weather/rain.png";
+                            break;
+
+                            // 雷雨処理
+                        case ("Thunderstorm"):
+                            weather_judge = "img/weather/thunderstorm.png";
+                            break;
+
+                            // 雪処理
+                        case ("Snow"):
+                            weather_judge = "img/weather/snow.png";
+                            break;
+                    }
+
+                    // 変更できたか確認↓ 「確認後削除」
+                    console.log(weather_judge);
+
+                    // tab-1-contentの<img>srcを書き換え
+                    $('.tab-1-content').children('img').attr('src', weather_judge);
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+            });
         });
     </script>
+
 </body>
 
 </html>

@@ -46,9 +46,9 @@
 /* タブ内容のスタイル */
 .tabs .tab-content {
     /* border: 1px solid #999; */
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     /* min-height: 200px; */
-    height: 35vh;
+    height: 32vh;
 }
 
 /* 選択されているタブのコンテンツのみを表示 */
@@ -67,7 +67,7 @@
 
 /* タブ内の画像 */
 .tabs img {
-    width: 32vh;
+    height : 100%;
 }
 
 /* メインフレーム下部分 */
@@ -114,6 +114,32 @@
 #address{
     font-size: 20px;
 }
-.nowaddress{
-    font-size: 24px;
+#nowaddress{
+    font-size: 32px;
+    height : 4vh;
 }
+/* .tab_content.img{
+    height : auto;
+    width : 214px;
+} */
+
+#address{
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color :black;
+}
+#address select {
+    background: transparent;
+    border: none;
+    /* font-size: 18px; */
+    /* height: 29px; */
+    /* padding: 5px; If you add too much padding here, the options won't show in IE */
+    width: 22%;
+    color: #fff;
+ }
+ option{
+     background-color: transparent;
+ }
