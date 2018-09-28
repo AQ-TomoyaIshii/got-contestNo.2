@@ -17,7 +17,7 @@
         </a>
         <div id="lunguage">
             <form action="">
-                <select name="language" id="language" onChange="location.href=value;">                    
+                <select name="language" id="language" onChange="location.href=value;">
                     <option value="main.html">日本語</option>
                     <option value="main_eng.html">english</option>
                 </select>
@@ -26,6 +26,7 @@
     </div>
     <div id="footer">
         <img src="img/top_img1.jpg" alt="">
+
 
         <div id="tophoto" class="menu">
             <img src="img/icon/camera_icon.png" alt="camera_icon">
@@ -40,6 +41,7 @@
                 }
             </script>
         </div>
+
         <a href="library.html">
             <div id="library" class="menu">
                 <img src="img/icon/book_icon.png" alt="book_icon">
@@ -59,12 +61,14 @@
             </div>
         </a>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $('[language]').change(function () {
-            window.location.href = '/main_eng.html';
+        $(function () {
+            var i = Math.floor(Math.random() * 3) + 1;
+            var imgsrc = `img/top_img${i}.jpg`
+            $('#footer').children('img').attr('src', imgsrc);
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

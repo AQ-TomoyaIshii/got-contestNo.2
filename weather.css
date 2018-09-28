@@ -4,7 +4,8 @@
 
 #main_frame {
     height: 90vh;
-    background-image: url("img/blue_sky.jpg")
+    background-size : cover;
+    background-image: url("img/bgimage/hare.jpg")
 }
 
 /************************************
@@ -30,6 +31,7 @@
     border-bottom: none;
     font-size: 22px;
     width: 12vh;
+    color : ghostwhite;
 }
 
 /* タブにマウスカーソルがのったときフッター */
@@ -63,7 +65,7 @@
 
 /* 選択されているタブのスタイルを変える */
 .tabs input[name="tab-radio"]:checked+.tab-label {
-    background-color: #fff;
+    background-color:black;
 }
 
 /* タブ内の画像 */
@@ -79,6 +81,7 @@
     /* height: 25%; */
     /* border: 0.5px solid black; */
     font-size: 1.6em;
+    color : ghostwhite;
 }
 
 .max {
@@ -96,7 +99,7 @@
     /* border: 0.5px solid black; */
     float: left;
     font-size: 1.6em;
-    color: black;
+    color:ghostwhite;
 }
 
 .min {
@@ -136,6 +139,7 @@ option {
 }
 .location{
     font-size: 1.6em;
+    color : white;
 }
 
 /* 背景透過色 */

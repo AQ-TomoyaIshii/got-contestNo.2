@@ -9,7 +9,7 @@ $('[name=cityName]').change(function () {
         // url: `http://10.17.3.228:3001/${ken}`,
         // url: `http://10.17.4.86:3001/${ken}`,
         // url:"http://192.168.0.5:3001/yokohama",
-        url: `http://35.221.68.16:3001/${ken}`,
+        url: `http://35.200.31.11:3001/${ken}`,
         type: "get",
         success: function (data) {
             console.log(`data:${data}`);
@@ -30,10 +30,10 @@ $('[name=cityName]').change(function () {
             var tdy_temp_max7_js = Math.floor(data.tdy_temp_max7);
             $(document).ready(function () {
                 //今日の変数の挿入
-                $(".humidity").html("湿度" + humi + "%");
-                $(".max").html("最高" + "<br/>" + max2 + "°");
-                $(".now").html("現在" + "<br/>" + main + "°");
-                $(".min").html("最低" + "<br/>" + min2 + "°");
+                $(".humidity").html("Humidity" + humi + "%");
+                $(".max").html("MAX" + "<br/>" + max2 + "°");
+                $(".now").html("NOW" + "<br/>" + main + "°");
+                $(".min").html("MIN" + "<br/>" + min2 + "°");
                 $(".tdy_0oc_max").html(tdy_temp_max0_js + "°");
                 $(".tdy_3oc_max").html(tdy_temp_max1_js + "°");
                 $(".tdy_6oc_max").html(tdy_temp_max2_js + "°");
@@ -108,7 +108,6 @@ $('[name=cityName]').change(function () {
 
             // 変更できたか確認↓ 「確認後削除」
             console.log(weather_judge);
-            console.log(weather_judge2);
 
             // tab-1-contentの<img>srcを書き換え
             $('.tab-1-content').children('img').attr('src', weather_judge);
