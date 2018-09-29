@@ -28,19 +28,21 @@
         <img src="img/top_img1.jpg" alt="">
 
 
-        <div id="tophoto" class="menu">
-            <img src="img/icon/camera_icon.png" alt="camera_icon">
-            <p>写真を撮る</p>
-            <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
-            <script>
-                document.querySelector("#tophoto").onclick = function (e) {
-                    document.querySelector("#upfile").click();
-                }
-                document.querySelector("#upfile").onchange = function (e) {
-                    console.log(e);
-                }
-            </script>
-        </div>
+        <a href="result.html">
+            <div id="tophoto" class="menu">
+                <img src="img/icon/camera_icon.png" alt="camera_icon">
+                <p>写真を撮る</p>
+                <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
+                <script>
+                    document.querySelector("#tophoto").onclick = function (e) {
+                        document.querySelector("#upfile").click();
+                    }
+                    document.querySelector("#upfile").onchange = function (e) {
+                        console.log(e);
+                    }
+                </script>
+            </div>
+        </a>
 
         <a href="library.html">
             <div id="library" class="menu">
