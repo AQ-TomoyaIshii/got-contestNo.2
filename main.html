@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="header.css">
 </head>
@@ -41,6 +42,29 @@
                     document.querySelector("#upfile").onchange = function (e) {
                         console.log(e);
                     }
+
+                    $(function() {
+                        $('#upfile').on("change", function() {
+                            var file = this.files[0];
+                            
+                            if(file != null) {
+                                console.log(file.name); // ファイル名をログに出力する
+                                let reader = new FileReader();
+                                reader.readAsDataURL(file); // base64 encode
+                                const fileResult = reader.result;
+                                console.log(fileResult);
+                                $.ajax({
+                                    url: `http://10.17.4.86:3001/fileResult`,
+                                    type: 'POST',
+                                });
+
+                                // $ajax.post({
+                                    
+                                // })
+                            }
+
+                        });
+                    });
                 </script>
             </div>
         <!-- </a> -->
