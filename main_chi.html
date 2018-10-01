@@ -12,15 +12,15 @@
 
 <body>
     <div id="header">
-        <a href="main_eng.html">
+        <a href="main_chi.html">
             <div id="top_title"><img src="img/top_title.jpg" alt="top_title"></div>
         </a>
         <div id="lunguage">
             <form action="">
                 <select name="language" id="language" onChange="location.href=value;">
                     <option value="main.html">日本語</option>
-                    <option value="main_eng.html" selected>english</option>
-                    <option value="main_chi.html">中文</option>
+                    <option value="main_eng.html">english</option>
+                    <option value="main_chi.html" selected>中文</option>
                 </select>
             </form>
         </div>
@@ -28,35 +28,39 @@
     <div id="footer">
         <img src="img/top_img1.jpg" alt="">
 
-        <div id="tophoto" class="menu">
-            <img src="img/icon/camera_icon.png" alt="camera_icon">
-            <p>take a photo</p>
-            <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
-            <script>
-                document.querySelector("#tophoto").onclick = function (e) {
-                    document.querySelector("#upfile").click();
-                }
-                document.querySelector("#upfile").onchange = function (e) {
-                    console.log(e);
-                }
-            </script>
-        </div>
-        <a href="library_eng.html">
+
+        <!-- <a href="result.html"> -->
+            <div id="tophoto" class="menu">
+                <img src="img/icon/camera_icon.png" alt="camera_icon">
+                <p>拍照</p>
+                <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
+                <script>
+                    document.querySelector("#tophoto").onclick = function (e) {
+                        document.querySelector("#upfile").click();
+                    }
+                    document.querySelector("#upfile").onchange = function (e) {
+                        console.log(e);
+                    }
+                </script>
+            </div>
+        <!-- </a> -->
+
+        <a href="library_chi.html">
             <div id="library" class="menu">
                 <img src="img/icon/book_icon.png" alt="book_icon">
-                <p>libraly</p>
+                <p>名单</p>
             </div>
         </a>
-        <a href="weather_eng.html">
+        <a href="weather_chi.html">
             <div id="weather" class="menu">
                 <img src="img/icon/weather_icon.png" alt="weather_icon">
-                <p>weather</p>
+                <p>天气</p>
             </div>
         </a>
-        <a href="how_to_eng.html">
+        <a href="how_to_chi.html">
             <div id="howtouse" class="menu">
                 <img src="img/icon/question_icon.png" alt="question_icon">
-                <p>how to use</p>
+                <p>怎么用</p>
             </div>
         </a>
     </div>
