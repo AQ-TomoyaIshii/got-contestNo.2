@@ -191,14 +191,14 @@ $('[name=cityName]').change(function () {
             $(document).ready(function () {
                 //明日の変数の挿入
 
-                $(".tmr_weat_0oc_max").html(tdy_temp_max0_js + "°");
-                $(".tmr_weat_3oc_max").html(tdy_temp_max1_js + "°");
-                $(".tmr_weat_6oc_max").html(tdy_temp_max2_js + "°");
-                $(".tmr_weat_9oc_max").html(tdy_temp_max3_js + "°");
-                $(".tmr_weat_12oc_max").html(tdy_temp_max4_js + "°");
-                $(".tmr_weat_15oc_max").html(tdy_temp_max5_js + "°");
-                $(".tmr_weat_18oc_max").html(tdy_temp_max6_js + "°");
-                $(".tmr_weat_21oc_max").html(tdy_temp_max7_js + "°");
+                $(".tmr_weat_0oc_max").html(tmr_temp_max0_js + "°");
+                $(".tmr_weat_3oc_max").html(tmr_temp_max1_js + "°");
+                $(".tmr_weat_6oc_max").html(tmr_temp_max2_js + "°");
+                $(".tmr_weat_9oc_max").html(tmr_temp_max3_js + "°");
+                $(".tmr_weat_12oc_max").html(tmr_temp_max4_js + "°");
+                $(".tmr_weat_15oc_max").html(tmr_temp_max5_js + "°");
+                $(".tmr_weat_18oc_max").html(tmr_temp_max6_js + "°");
+                $(".tmr_weat_21oc_max").html(tmr_temp_max7_js + "°");
             });
 
 
@@ -248,25 +248,25 @@ $('[name=cityName]').change(function () {
             $('.tmr_weat_21oc_img').children('img').attr('src',judge(tmr_weather7_js));
 
             //明後日の気温
-            var dat_temp_max0_js = Math.floor(data.tmr_temp_max0);
-            var dat_temp_max1_js = Math.floor(data.tmr_temp_max1);
-            var dat_temp_max2_js = Math.floor(data.tmr_temp_max2);
-            var dat_temp_max3_js = Math.floor(data.tmr_temp_max3);
-            var dat_temp_max4_js = Math.floor(data.tmr_temp_max4);
-            var dat_temp_max5_js = Math.floor(data.tmr_temp_max5);
-            var dat_temp_max6_js = Math.floor(data.tmr_temp_max6);
-            var dat_temp_max7_js = Math.floor(data.tmr_temp_max7);
+            var dat_temp_max0_js = Math.floor(data.dat_temp_max0);
+            var dat_temp_max1_js = Math.floor(data.dat_temp_max1);
+            var dat_temp_max2_js = Math.floor(data.dat_temp_max2);
+            var dat_temp_max3_js = Math.floor(data.dat_temp_max3);
+            var dat_temp_max4_js = Math.floor(data.dat_temp_max4);
+            var dat_temp_max5_js = Math.floor(data.dat_temp_max5);
+            var dat_temp_max6_js = Math.floor(data.dat_temp_max6);
+            var dat_temp_max7_js = Math.floor(data.dat_temp_max7);
             $(document).ready(function () {
                 //明日の変数の挿入
 
-                $(".dat_weat_0oc_max").html(tdy_temp_max0_js + "°");
-                $(".dat_weat_3oc_max").html(tdy_temp_max1_js + "°");
-                $(".dat_weat_6oc_max").html(tdy_temp_max2_js + "°");
-                $(".dat_weat_9oc_max").html(tdy_temp_max3_js + "°");
-                $(".dat_weat_12oc_max").html(tdy_temp_max4_js + "°");
-                $(".dat_weat_15oc_max").html(tdy_temp_max5_js + "°");
-                $(".dat_weat_18oc_max").html(tdy_temp_max6_js + "°");
-                $(".dat_weat_21oc_max").html(tdy_temp_max7_js + "°");
+                $(".dat_weat_0oc_max").html(dat_temp_max0_js + "°");
+                $(".dat_weat_3oc_max").html(dat_temp_max1_js + "°");
+                $(".dat_weat_6oc_max").html(dat_temp_max2_js + "°");
+                $(".dat_weat_9oc_max").html(dat_temp_max3_js + "°");
+                $(".dat_weat_12oc_max").html(dat_temp_max4_js + "°");
+                $(".dat_weat_15oc_max").html(dat_temp_max5_js + "°");
+                $(".dat_weat_18oc_max").html(dat_temp_max6_js + "°");
+                $(".dat_weat_21oc_max").html(dat_temp_max7_js + "°");
             });
 
             //明後日の天気判定
