@@ -30,25 +30,71 @@
 
 
         <!-- <a href="result.html"> -->
-            <div id="tophoto" class="menu">
-                <img src="img/icon/camera_icon.png" alt="camera_icon">
-                <p>拍照</p>
-                <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
-                <script>
-                    document.querySelector("#tophoto").onclick = function (e) {
-                        document.querySelector("#upfile").click();
-                    }
-                    document.querySelector("#upfile").onchange = function (e) {
-                        console.log(e);
-                    }
-                </script>
-            </div>
+        <div id="tophoto" class="menu">
+            <img src="img/icon/camera_icon.png" alt="camera_icon">
+            <p>拍照</p>
+            <input type="file" name="upfile" id="upfile" accept="image/*" style="display:none;" />
+            <script>
+                // window.onload = function(){
+                //     localStorage.clear;
+                // };
+                document.querySelector("#tophoto").onclick = function (e) {
+                    document.querySelector("#upfile").click();
+                }
+                document.querySelector("#upfile").onchange = function (e) {
+                    console.log(e);
+                }
+
+                $(function () {
+                    $('#upfile').on("change", function () {
+                        var file = this.files[0];
+
+                        if (file != null) {
+                            // console.log(file.name); // ファイル名をログに出力する
+                            let reader = new FileReader();
+                            reader.readAsDataURL(file);
+                            reader.addEventListener("load", function () {
+                                // console.log(reader.result)
+                                // alert(reader.result.split("base64,")[1].length)
+                                $.ajax({
+                                    method: 'POST',
+                                    url: "http://10.17.4.86:3020/fileResult",
+                                    data: {
+                                        fileResult: reader.result.split("base64,")[1]
+                                    },
+                                    success: function (result) {
+                                        let a = result.result
+                                        window.localStorage.setItem('kekka', a);
+                                        location.href = "result_chi.html";
+                                    }
+                                });
+                            }, false);
+
+                            // base64 encode
+                            // const fileResult = reader.result;
+                            // console.log(fileResult);
+                            // var fData = new FormData();
+                            // fData.append('img', fileResult)
+                            // $.ajax({
+                            //     url: `http://localhost:3020/${fileResult}`,
+                            //     type: 'POST',
+                            //     data: fData,
+                            //     contentType: false,
+                            //     processData: false
+                            // });
+
+                        }
+
+                    });
+                });
+            </script>
+        </div>
         <!-- </a> -->
 
         <a href="library_chi.html">
             <div id="library" class="menu">
                 <img src="img/icon/book_icon.png" alt="book_icon">
-                <p>名单</p>
+                <p>一览</p>
             </div>
         </a>
         <a href="weather_chi.html">
@@ -60,7 +106,7 @@
         <a href="how_to_chi.html">
             <div id="howtouse" class="menu">
                 <img src="img/icon/question_icon.png" alt="question_icon">
-                <p>怎么用</p>
+                <p>一览</p>
             </div>
         </a>
     </div>

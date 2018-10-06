@@ -59,6 +59,7 @@ $('[name=cityName]').change(function () {
         url: `http://10.17.4.86:3001/${ken}`,
         // url:"http://192.168.0.5:3001/yokohama",
         // url: `http://35.221.68.16:3001/${ken}`,
+        // url: `http://192.168.43.118:3001/${ken}`,
         type: "get",
         success: function (data) {
             console.log(`data:${data}`);
